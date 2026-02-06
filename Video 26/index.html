@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables and Media Queries</title>
+    <style>
+
+        :root {
+            --primary-color: royalblue;
+            --secondary-color: lightseagreen;
+            --accent-color: rgba(18, 158, 90, 0.703);
+            --text-color: rgb(180, 19, 19);
+        }
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text-color);
+        }
+        div:first-child {
+            background-color: var(--accent-color);
+
+        }
+        .container {
+            background-color: var(--primary-color);
+        }
+        .nav {
+            background-color: var(--secondary-color);
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+        }
+        ul li {
+            list-style: none;
+            padding: 34px;
+        }
+        ul li:first-child {
+            --color: rgb(225, 75, 75);
+            background-color: var(--accent-color);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero eum laboriosam corporis commodi, ex nulla
+        pariatur obcaecati, quis tempora beatae sapiente, saepe quaerat itaque eos optio voluptatum debitis accusamus
+        quam magni explicabo eligendi iste tenetur natus. Blanditiis maxime eos sed provident nobis hic voluptatum
+        obcaecati!
+    </div>
+</body>
+
+</html>
+<!-- In HTML, variables themselves do not exist, but in CSS (which is used within HTML files), we can define and use variables called CSS custom properties.
+
+CSS variables (custom properties) are defined using the --variable-name syntax inside a selector (commonly :root for global scope). For example:
+
+You can then use these variables anywhere in your CSS with the var() function:
+
+Why use CSS variables?
+
+Reusability: Define a value once and use it in multiple places.
+Easy maintenance: Change the variable value in one place to update everywhere it’s used.
+Theming: Quickly switch color schemes or styles by changing variable values.
+Consistency: Ensures the same value is used throughout your styles.
+In your file, variables like --primary-color and --text-color help keep your design consistent and easy to update. -->
+<!-- :root {
+  --primary-color: royalblue;
+}
+background-color: var(--primary-color); -->

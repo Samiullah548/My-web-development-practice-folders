@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /*
+        Most Important CSS Selectors:
+        1. Universal Selector: * { ... }
+        2. Type Selector: element { ... }
+        3. Class Selector: .className { ... }
+        4. ID Selector: #idName { ... }
+        5. Descendant Selector: parent child { ... }
+        6. Child Selector: parent > child { ... }
+        7. Adjacent Sibling Selector: element1 + element2 { ... }
+        8. General Sibling Selector: element1 ~ element2 { ... }
+        9. Attribute Selector: element[attribute], element[attribute="value"] { ... }
+        10. Pseudo-class Selector: element:pseudo-class { ... }
+        11. Pseudo-element Selector: element::pseudo-element { ... }
+        */
+        /* .box:first-child {
+            background-color: lightgreen;
+        } */
+
+        /* .box::first-line {
+           color: rgb(252, 0, 0);
+        } */
+        /* .boxes *{
+            color: red;
+            font-weight: bold;
+            border: 2px solid red;
+            background-color: yellowgreen;
+        } */
+        /* p, a, .box,
+        [data-color="primary"] {
+            padding-top: 45px;
+        } */
+         /* .box:nth-child(even) {
+            background-color: lightblue;
+         } */
+            .box:nth-last-child(2) {
+                background-color: lightgreen;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+        <div class="box">Hey i am a box</div>
+    </div>
+</body>
+
+</html>

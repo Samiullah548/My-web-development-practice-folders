@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Colour Nav Bar and using css variable to change contrast</title>
+    <style>
+        :root {
+            --contrast: 1;
+            --nav-bg1: hsl(0, 80%, calc(50% * var(--contrast)));
+            --nav-bg2: hsl(120, 80%, calc(50% * var(--contrast)));
+            --nav-bg3: hsl(240, 80%, calc(50% * var(--contrast)));
+            --nav-text: hsl(0, 0%, calc(100% - 60% * var(--contrast)));
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, var(--nav-bg1), var(--nav-bg2), var(--nav-bg3));
+            padding: 1rem 0;
+        }
+        .navbar a {
+            color: var(--nav-text);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .contrast-slider {
+            margin: 2rem auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contrast-slider label {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+</body>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="contrast-slider">
+        <label for="contrastRange">Contrast: <span id="contrastValue">1</span></label>
+        <input type="range" id="contrastRange" min="0.5" max="2" step="0.01" value="1">
+    </div>
+    <script>
+        const contrastRange = document.getElementById('contrastRange');
+        const contrastValue = document.getElementById('contrastValue');
+        contrastRange.addEventListener('input', function() {
+            document.documentElement.style.setProperty('--contrast', this.value);
+            contrastValue.textContent = this.value;
+        });
+    </script>
+</body>
+</html>
