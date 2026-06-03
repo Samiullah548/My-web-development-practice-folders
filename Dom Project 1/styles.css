@@ -1,0 +1,44 @@
+.button {
+    padding: 13px 114px 136px 123px;
+    margin-left: 63px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+body{
+    display: flex;
+    display: inline;
+}
+h1{
+    margin: 30px 0 75px 300px;
+    color: rgb(231, 43, 5);
+    margin-left: 483px;
+}
+
+nav{
+    text-align: center;
+}
+
+h2{
+    margin-left: 338px;
+    margin-top: 256px;
+}
+span{
+    padding: 32px;
+}
+span#grey.button{
+    background-color: grey;
+}
+span#white.button{
+    background-color: white;
+}
+span#blue.button{
+    background-color: blue;
+}
+span#yellow.button{
+    background-color: yellow;
+}
+
