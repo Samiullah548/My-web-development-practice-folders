@@ -1,0 +1,44 @@
+Java script is synchronous single threaded language. 
+
+synchronous single threaded = Default
+   
+ 
+ Eecution context 
+             execute one line of code at a time 
+             console log  => 1                  
+             console log  => 2                  
+                                                
+             call Stack                                      Memory Heap
+
+ Each operation waits for the last one to complete before executing
+
+ blocking code
+ block the flow of program
+ read file synchronous
+
+ non blocking code 
+ does not blocking execution
+ read file async
+
+
+ java script ka engine Memory Heap se aur call Stack se banta hai.
+
+ web api browser ke andar milti hai aur kahin nahi milti hai
+ web api ke alawa kai baar environment bhi diye jate hai jaise ki [node] 
+ web api hogi to DOM ka access milega 
+ node hoga to dom api ka access nahi milega 
+
+ task queue
+ ye hi hai jo java script ko itna fast banati hai
+
+ promises bhi hote hai 
+ isme ek alag queue hoti hai jisko high priority bhi bolte hai aur promise queue bhi bolte hai.
+
+ ham call Stack se ek call bhjte hai vo call ya to web api me ya node me jayegi phir inke andar ek register callback ek function hota hai vo hamari call register karwa deta hai phir vo call task queue me jaati hai, task queue me sab calls add hoti jati hai aur ek ke baad ek call stack me wapas add hoti jaati hai, aapne chahe koi bhi call di ho jaise ke koi bhi event koi bhi function, ye fatafat saari calls add karta rahta hai stack me
+
+
+ fetch() api ye same kaam karti hai bas isme task queueko thoda expand kiya gya jo thodi [HIGH PRIORITY] ki hai
+
+ fetch me ek promise naam ka ek concept hota hai jo kahta hai ye task thodi der baad me kar dena hai, ya agar nahi hua to bhi bata dena 
+
+ 
